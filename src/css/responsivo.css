@@ -1,0 +1,68 @@
+/* essa parte vamos configurar para nosso site ficar bom em cllr e tablet nao so apenas em pc */
+/* uma dica é ir em especionar elementos e colocar em janela, assim da para ver em que tamanho o site começa a quebrar */
+@media (max-width: 1024px){ /* quando a lagura maxima for 1024, vai aplicar essas regras a baixo */
+    .cabecalho{
+        justify-content: center;    /* alinhou o cabeçalho no centro */
+        flex-direction: column;     /* fez o logo e as opçoes fica um a baixo do outro */
+        padding: 50px 0;
+        gap: 15px;      /* afastou as opçoes da logo */
+    }
+    
+    .cabecalho .menu li a{ /* isso é apenas as opçoes a baixo da logo */
+        padding: 15px;
+    }
+
+    .home .informacoes{     /* aqui é os elementos que estão em cima da parte escura-transoparente */
+        padding: 30px;  /* isso fez tudo ficar um pouco mais na lateral */
+    }
+
+    .home .informacoes img{
+        max-width: 100px;
+    }
+
+    .home .informacoes .titulo{
+        font-size: 40px;
+    }
+
+    .compre-ja .cartao{     /* o cartão a baixo da imagem */
+        width: 70%;     /* porcetagem para ele diminuir a aumentar sozinho, com px ele ficaria fixo */
+    }
+}
+
+@media (max-width: 768px){      /* aqui é resoluçao de tablet */
+    .compre-ja{
+        padding: 30px;
+    }
+
+    .compre-ja .cartao{
+        padding: 80px 20px; /* 80 pra cima e pra baixo e 20 para o lados */
+        width: 100%;    /* faz ele preencher quase a tela toda */
+    }
+
+    .compre-ja .informacoes h3{ /* titulo que estava dentro do cartão */
+        font-size: 35px;
+    }
+
+    .compre-ja .informacoes .plataformas{
+        flex-direction: column;     /* fez os simbolos de ps5 xbos e pc, ficarem um em baixo do outro */
+    }
+
+    .btn-plataforma{
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    .btn-comprar{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px){
+    main::after{        /* isso é o nome da classe do degrader escuro-transparente */
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4) 100%, transparent 65%);
+    }
+
+    .compre-ja .cartao .capa-do-jogo{  /* imagem do gta dentro do cartão */
+        max-width: 80%;
+    }
+}
